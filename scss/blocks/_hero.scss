@@ -1,0 +1,87 @@
+.hero__screen {
+  background-color: #2d2641;
+  height: 600px;
+  padding-top: 105px;
+  position: relative;
+}
+
+.hero__body {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.hero__box {
+  max-width: 530px;
+}
+.hero__span {
+  width: 150px;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  margin-bottom: 65px;
+}
+.hero__title {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.hero__text {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+.hero__img {
+  max-width: 540px;
+  max-height: 640px;
+}
+.hero__btn {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  border: 1.5px solid #ffffff;
+  padding: 12px 30px;
+  &:hover {
+    color: #2c2830;
+    background: #ffffff;
+    border: 1.5px solid #ffffff;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero__screen {
+    padding: 0 0 95px 0;
+    height: 100%;
+  }
+  .hero__span {
+    display: none;
+  }
+  .hero__box {
+    text-align: center;
+    margin-top: 95px;
+  }
+  .hero__body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .hero__img {
+    max-width: 768px;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}

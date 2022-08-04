@@ -1,0 +1,124 @@
+.header__screen {
+  padding: 30px 0;
+}
+.header__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__spans {
+  border: 2px solid #2c2830;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  padding: 6px 5px;
+}
+.header__span {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: #2c2830;
+  border-radius: 1.5px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.nav__link {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #837d88;
+  &:hover {
+    color: #2c2830;
+  }
+}
+.nav__btn {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  border: 1.5px solid #2c2830;
+  color: #2c2830;
+  margin-left: 25px;
+  padding: 13px 30px;
+  &:hover {
+    background: #2c2830;
+    color: #ffffff;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .header__spans {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
+.label__check {
+  display: block;
+}
+
+#menu,
+#close {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+}
+
+.nav__list {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 99;
+  width: 50%;
+  height: 100vh;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-top: 80px;
+  background-color: #000;
+  transition: all 0.5s ease;
+}
+
+.nav__link {
+  color: #fff;
+}
+
+#close {
+  display: none;
+}
+
+#check:checked ~ .nav__list {
+  right: 0;
+}
+
+#check:checked ~ .label__check #menu {
+  display: none;
+  color: #fff;
+  z-index: 101;
+}
+
+#check:checked ~ .label__check #close {
+  display: block;
+  color: #fff;
+  z-index: 101;
+}
